@@ -19,7 +19,7 @@ export default function Login() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let data = await fetch("http://localhost:3001/api/user/login", {
+    let data = await fetch("https://heath.onrender.com/api/user/login", {
       method: "POST",
       body: JSON.stringify(user),
       mode: "cors", // no-cors, *cors, same-origin

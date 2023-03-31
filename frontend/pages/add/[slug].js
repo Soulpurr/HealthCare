@@ -28,7 +28,7 @@ export default function add() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let data1 = await fetch(
-      `http://localhost:3001/api/${router.query.slug.toLowerCase()}/add${router.query.slug.toLowerCase()}`,
+      `https://heath.onrender.com/api/${router.query.slug.toLowerCase()}/add${router.query.slug.toLowerCase()}`,
       {
         method: "POST",
         body: JSON.stringify(data),

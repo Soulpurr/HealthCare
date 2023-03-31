@@ -27,7 +27,7 @@ function detailsitems({ details }) {
   const handleEdit = async (e) => {
     console.log(details1);
     let data = await fetch(
-      `http://localhost:3001/api/data/editData/${details1.id}`,
+      `https://heath.onrender.com/api/data/editData/${details1.id}`,
       {
         method: "POST",
         body: JSON.stringify(details1),

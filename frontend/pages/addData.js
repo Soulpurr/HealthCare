@@ -24,7 +24,7 @@ export default function addData() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let data1 = await fetch("http://localhost:3001/api/data/createData", {
+    let data1 = await fetch("https://heath.onrender.com/api/data/createData", {
       method: "POST",
       body: JSON.stringify(data),
       mode: "cors", // no-cors, *cors, same-origin
