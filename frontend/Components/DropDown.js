@@ -45,7 +45,7 @@ function DropDown() {
           >
             <div className="p-2">
               {states.map((item) => (
-                <Link
+                <Link key={item}
                   href={`/data/${item}`}
                   className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                 >

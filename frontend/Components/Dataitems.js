@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { getCookie } from "cookies-next";
 
-function detailsitems({ details }) {
+function Detailsitems({ details }) {
   const router = useRouter();
   const [user, setuser] = useState(null);
   useEffect(() => {
@@ -197,4 +197,4 @@ function detailsitems({ details }) {
   );
 }
 
-export default detailsitems;
+export default Detailsitems;

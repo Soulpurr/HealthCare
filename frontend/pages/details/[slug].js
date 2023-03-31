@@ -41,7 +41,7 @@ function Details({ data }) {
             </tr>
           </thead>
           {data.map((item) => (
-            <tbody>
+            <tbody key={item._id}>
               <tr
                 key={item._id}
                 className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"

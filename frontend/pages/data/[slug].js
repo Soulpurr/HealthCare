@@ -18,7 +18,7 @@ export default Data;
 export async function getServerSideProps(context) {
   console.log(context.query.slug);
   let data = await fetch(
-    `http://localhost:3001/api/data/fetchData/${context.query.slug.toLowerCase()}`
+    `https://heath.onrender.com/api/data/fetchData/${context.query.slug.toLowerCase()}`
   );
   let res = await data.json();
 

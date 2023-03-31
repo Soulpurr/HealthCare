@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import { useRouter } from "next/router";
+import Link from "next/link";
 export default function SignUp() {
   const router = useRouter();
   useEffect(() => {
@@ -136,11 +137,10 @@ export default function SignUp() {
         </form>
 
         <p className="mt-8 text-xs font-light text-center text-gray-700">
-          {" "}
-          Don't have an account?{" "}
-          <a href="#" className="font-medium text-purple-600 hover:underline">
-            Sign up
-          </a>
+           Have an account?
+          <Link href="/login" className="font-medium text-purple-600 hover:underline">
+            Login
+          </Link>
         </p>
       </div>
     </div>
