@@ -86,6 +86,22 @@ export default function Header() {
                   Patients
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/add/patient"
+                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Add Patients
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/add/donor"
+                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Add Donor
+                </Link>
+              </li>
 
               {!user ? (
                 <li>
