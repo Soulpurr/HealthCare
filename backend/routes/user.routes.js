@@ -6,7 +6,7 @@ var jwt = require("jsonwebtoken");
 const verifyUser = require("../middleware/verifyUser");
 require("dotenv").config();
 router.post("/signUp", async (req, res) => {
-  const { fname, lname, email, password } = req.body;
+  const { fname, lname, email, type, password } = req.body;
   let user = await User.findOne({ email });
   let success = false;
   try {
@@ -16,7 +16,7 @@ router.post("/signUp", async (req, res) => {
       user = await User.create({
         fname: fname,
         lname: lname,
-
+        type: type,
         email: email,
         password: securePass,
       });

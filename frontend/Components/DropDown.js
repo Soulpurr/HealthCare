@@ -7,12 +7,12 @@ function DropDown() {
   return (
     <div className="flex justify-center mt-10">
       <div className="w-30 flex justify-center items-center text-center bg-white border rounded-md">
-        <a
+        <Link
           href="#"
           className="px-4 py-2 text-sm text-gray-600 hover:text-gray-700 hover:bg-gray-50 rounded-l-md"
         >
           States
-        </a>
+        </Link>
 
         <div className="relative">
           <button

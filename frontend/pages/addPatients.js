@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { getCookie } from "cookies-next";
-import { useRouter } from "next/router";
 
 export default function addData() {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!getCookie("user")) {
-      router.push("/signUp");
-    }
-  }, []);
   const [data, setdata] = useState({
-    hospitalName: "",
-    bedsAvailable: "",
-    address: "",
-    state: "",
-    city: "",
+    fullName: "",
+    age: "",
+    gender: "",
+    medicalId: "",
+    bloodType: "",
+    organs: "",
+    weight: "",
+    height: "",
     phone_Number: "",
   });
   const handleChnage = (e) => {
@@ -54,13 +49,13 @@ export default function addData() {
               for="email"
               className="block text-sm font-semibold text-gray-800"
             >
-              Hospital Name
+              Full Name
             </label>
             <input
               type="text"
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="hospitalName"
-              value={data.hospitalName}
+              name="fullName"
+              value={data.fullName}
               onChange={handleChnage}
             />
           </div>
@@ -69,13 +64,13 @@ export default function addData() {
               for="email"
               className="block text-sm font-semibold text-gray-800"
             >
-              Beds Available
+              Age
             </label>
             <input
               type="text"
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="bedsAvailable"
-              value={data.bedsAvailable}
+              name="age"
+              value={data.age}
               onChange={handleChnage}
             />
           </div>
@@ -84,13 +79,13 @@ export default function addData() {
               for="text"
               className="block text-sm font-semibold text-gray-800"
             >
-              Address
+              Gender
             </label>
             <input
               type="text"
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="address"
-              value={data.address}
+              name="gender"
+              value={data.gender}
               onChange={handleChnage}
             />
           </div>
@@ -99,13 +94,13 @@ export default function addData() {
               for="password"
               className="block text-sm font-semibold text-gray-800"
             >
-              State
+              Medical Id
             </label>
             <input
               type="text"
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="state"
-              value={data.state}
+              name="medicalId"
+              value={data.medicalId}
               onChange={handleChnage}
             />
           </div>
@@ -114,13 +109,13 @@ export default function addData() {
               for="password"
               className="block text-sm font-semibold text-gray-800"
             >
-              City
+              Blood Type
             </label>
             <input
               type="text"
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="city"
-              value={data.city}
+              name="bloodType"
+              value={data.bloodType}
               onChange={handleChnage}
             />
           </div>
@@ -129,7 +124,52 @@ export default function addData() {
               for="password"
               className="block text-sm font-semibold text-gray-800"
             >
-              Contact Number
+              Organs
+            </label>
+            <input
+              type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              name="organs"
+              value={data.organs}
+              onChange={handleChnage}
+            />
+          </div>
+          <div className="mb-2">
+            <label
+              for="password"
+              className="block text-sm font-semibold text-gray-800"
+            >
+              Weight
+            </label>
+            <input
+              type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              name="weight"
+              value={data.weight}
+              onChange={handleChnage}
+            />
+          </div>
+          <div className="mb-2">
+            <label
+              for="password"
+              className="block text-sm font-semibold text-gray-800"
+            >
+              Height
+            </label>
+            <input
+              type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              name="height"
+              value={data.height}
+              onChange={handleChnage}
+            />
+          </div>
+          <div className="mb-2">
+            <label
+              for="password"
+              className="block text-sm font-semibold text-gray-800"
+            >
+              Phone Number
             </label>
             <input
               type="text"

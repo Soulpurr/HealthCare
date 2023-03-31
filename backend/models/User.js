@@ -6,6 +6,7 @@ const userSchema = new Schema(
     fname: { type: String, required: true }, // String is shorthand for {type: String}
     lname: String,
     email: { type: String, required: true, unique: true },
+    type: { type: String },
     password: { type: String, required: true },
   },
   {

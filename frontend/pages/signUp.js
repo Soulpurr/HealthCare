@@ -12,6 +12,7 @@ export default function signUp() {
     fname: "",
     lname: "",
     email: "",
+    type: "",
     password: "",
   });
   const handleChnage = (e) => {
@@ -35,6 +36,7 @@ export default function signUp() {
 
     if (res.success) {
       setCookie("user", res.token);
+      router.push("/");
     }
     console.log(res);
   };
@@ -87,6 +89,21 @@ export default function signUp() {
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               name="email"
               value={user.email}
+              onChange={handleChnage}
+            />
+          </div>
+          <div className="mb-2">
+            <label
+              for="text"
+              className="block text-sm font-semibold text-gray-800"
+            >
+              type
+            </label>
+            <input
+              type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              name="type"
+              value={user.type}
               onChange={handleChnage}
             />
           </div>

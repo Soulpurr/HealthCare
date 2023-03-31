@@ -1,8 +1,8 @@
 const express = require("express");
 const verifyUser = require("../middleware/verifyUser");
 const Data = require("../models/Data");
-const router = express.Router();
 
+const router = express.Router();
 router.post("/createData", verifyUser, async (req, res) => {
   try {
     const { hospitalName, bedsAvailable, state, city, address, phone_Number } =
@@ -74,6 +74,36 @@ router.get("/fetchData/:state", async (req, res) => {
     res.send(data);
   } catch (error) {
     res.send("Failed");
+  }
+});
+router.post("/addDonor", async (req, res) => {
+  try {
+    const {
+      fullName,
+      age,
+      gender,
+      medicalId,
+      bloodType,
+      organs,
+      weight,
+      height,
+      phone_Number,
+    } = req.body;
+    let addData = await Data.create({
+      fullName,
+      age,
+      gender,
+      medicalId,
+      bloodType,
+      organs,
+      weight,
+      height,
+      phone_Number,
+      user: req.user._id,
+    });
+    res.send(addData);
+  } catch (error) {
+    res.send(error);
   }
 });
 
