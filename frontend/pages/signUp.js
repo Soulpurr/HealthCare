@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import { useRouter } from "next/router";
-export default function signUp() {
+export default function SignUp() {
   const router = useRouter();
   useEffect(() => {
     if (getCookie("user")) {

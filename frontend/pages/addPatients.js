@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getCookie } from "cookies-next";
 
-export default function addData() {
+export default function AddData() {
   const [data, setdata] = useState({
     fullName: "",
     age: "",

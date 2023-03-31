@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useGeolocated } from "react-geolocated";
 
-const location = () => {
+const Location = () => {
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.permissions
@@ -30,4 +30,4 @@ const location = () => {
   return <>Hii</>;
 };
 
-export default location;
+export default Location;

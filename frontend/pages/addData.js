@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getCookie } from "cookies-next";
 import { useRouter } from "next/router";
 
-export default function addData() {
+export default function AddData() {
   const router = useRouter();
 
   useEffect(() => {

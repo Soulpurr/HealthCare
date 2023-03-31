@@ -2,7 +2,7 @@ import Header from "@/Components/Header";
 import Link from "next/link";
 import React from "react";
 
-function register() {
+function Register() {
   return (
     <div>
       <Header />
@@ -37,4 +37,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register;
